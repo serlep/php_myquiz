@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">your score = {{score}}</div>
+        	<div class="col-md-12">
+				<form method="post" action=".">
+					{% for quiz in quizs %}
+						<lable><strong>{{quiz.id}}
+							{{quiz.question}}</strong><br>
+						</lable>
+							<div class='col-md-6'>
+								<input type="radio" name="answerone{{ quiz.id }}" value="A">
+								<lable for="answeroneA">{{ quiz.answer }}</lable><br>
+							</div>
+							<div class='col-md-6'>
+ 								<input type="radio" name="answerone{{ quiz.id }}" value="B">
+ 								<lable for="answeroneB">{{ quiz.wrong }}</lable><br>
+ 							</div>
+ 							<div class='col-md-12'>
+  								<input type="radio" name="answerone{{ quiz.id }}" value="C">
+  								<lable for="answeroneC">{{ quiz.wrong2 }}</lable><br><br>
+  							</div>
+					{% endfor %}
+							<input type="submit" class="btn btn-success" value="Submit">
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}

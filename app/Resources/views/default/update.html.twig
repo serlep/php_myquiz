@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    
+<h1>Update</h1>
+    {{form_start(form, {'attr': {'validate': 'validate'}}) }}
+    {{form_widget(form, {'attr': {'validate': 'validate'}})}}
+    {{form_end(form)}}
+    <a href="/delete/{{ app.session.get('user')[0].id }}" class="btn btn-danger">Delete</a>
+{% endblock %}

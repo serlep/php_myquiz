@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    
+<h1>Login</h1>
+    {{form_start(form, {'attr': {'validate': 'validate'}}) }}
+    {{form_widget(form, {'attr': {'validate': 'validate'}})}}
+    {{form_end(form)}}
+{% endblock %}

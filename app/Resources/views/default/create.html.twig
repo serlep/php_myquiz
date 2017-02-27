@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    
+<h1>Create new category n quizz</h1>
+    {{form_start(form, {'attr': {'validate': 'validate'}}) }}
+    {{form_widget(form, {'attr': {'validate': 'validate'}})}}
+    {{form_end(form)}}
+    <a href="/newquiz" class="btn btn-primary">create quiz</a>
+{% endblock %}
